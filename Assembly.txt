@@ -1,0 +1,7 @@
+6
+addu 3 4 1
+subu 2 4 6
+srl 1 2 3
+add 4 8 16
+addiu 4 5 8
+xor 13 1 13
