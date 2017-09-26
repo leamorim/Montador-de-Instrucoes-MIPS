@@ -1,9 +1,3 @@
-/*
- * Universidade Federal de Pernambuco
- * Centro de Informática
- * Disciplina: Algoritmos e Estrutura de Dados
- *
- */
 import java.io.*;
 
 /**
@@ -13,7 +7,7 @@ import java.io.*;
  * Exemplo de Uso: <br> <br> <code>
  *
  * // Abre os arquivos de entrada e saída <br>
- * Arquivo io = new Arquivo("L1Q1.in", "L1Q1.out"); <br> <br>
+ * Arquivo io = new Arquivo("L1.in", "L1.out"); <br> <br>
  *
  * // Lê dados do arquivo de entrada <br>
  * String s = io.readString(); <br>
