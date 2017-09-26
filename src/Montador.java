@@ -3,8 +3,7 @@
 			ESTE CODIGO FOI DESENVOLVIDO PARA FACILITAR OS TESTES DO PROJETO DE HARDWARE
 			
 			A ENTRADA DEVERA SER UM CODIGO EM ASSEMBLY IGNORANDO ','  '('  ')'  '.'
-			NAO FUNCIONA COM NUMERO NEGATIVO
-			
+		
 			EXEMPLO DE ENTRADA
 			
 			7//NUMERO DE INSTRUÇOES
@@ -296,7 +295,6 @@ public class Montador {
 			RS = io.readInt();
 			assembly += RT+" " + IMM+" (" + RS+")";
 		}
-		
 		imprimir(formata_I(RS,RT,IMM,opcode),assembly);
 	}
 	
@@ -336,12 +334,13 @@ public class Montador {
 	
 	String retorna_bits(int i, int tamanho) {
 		String temp = Integer.toBinaryString(i);
-		
-		while(temp.length() < tamanho){
-			temp = "0" + temp;
-		}
-		
-		return temp;
+                    while(temp.length() < tamanho){
+                            temp = "0" + temp;
+                    }
+                if(i < 0){
+                    temp = temp.substring(16);
+                }    
+                return temp;
 	}
 	
 	String retorna_formatacao() {
