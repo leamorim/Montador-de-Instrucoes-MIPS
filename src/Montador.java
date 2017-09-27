@@ -3,7 +3,8 @@
 			ESTE CODIGO FOI DESENVOLVIDO PARA FACILITAR OS TESTES DO PROJETO DE HARDWARE
 			
 			A ENTRADA DEVERA SER UM CODIGO EM ASSEMBLY IGNORANDO ','  '('  ')'  '.'
-		
+			NAO FUNCIONA COM NUMERO NEGATIVO
+			
 			EXEMPLO DE ENTRADA
 			
 			7//NUMERO DE INSTRUÇOES
@@ -21,6 +22,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Montador {
 	
@@ -29,7 +31,7 @@ public class Montador {
 	String instrucao,opcode,funcao;
 	int RS,RD,RT,shamt,IMM,offset;
 	Arquivo io = new Arquivo("Assembly.txt","instrucoes.mif");
-	
+	Scanner ler = new Scanner(System.in);
 	
 	public class Estrutura{
 		String assembly;
@@ -207,7 +209,10 @@ public class Montador {
 		io.println("END;");
 		io.close();
                 System.out.println("Convertido com sucesso !");
-                System.out.println("Infra de Hardware EC 2017.1 ;)");
+                System.out.println("Monitoria Infra de Hardware EC - lea");
+                System.out.println("tecle ENTER para sair !");
+                while(!ler.hasNextLine()){}
+                
 	}
 	
 	void processo_R(int i){
